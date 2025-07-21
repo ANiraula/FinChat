@@ -3,7 +3,7 @@ https://huggingface.co/spaces/AnilNiraula/FinChat
 A Financial Chatbot Powered by NLP and Quantitative Analysis
 Project Overview
 
-FinChat is an interactive financial chatbot designed to provide insights into stock performance, investment projections, and basic financial advice. Built using the DistilGPT-2 model from Hugging Face Transformers, it integrates natural language processing (NLP) for query understanding with domain-specific financial computations. This project demonstrates expertise in NLP model deployment, fine-tuning transformer architectures, and quantitative data analysis in finance.
+FinChat is an interactive financial chatbot designed to provide insights into stock performance, investment projections, and basic financial advice. Built using the SmolLM-135M-Instruct model from Hugging Face Transformers, it integrates natural language processing (NLP) for query understanding with domain-specific financial computations. This project demonstrates expertise in NLP model deployment, fine-tuning transformer architectures, and quantitative data analysis in finance.
 Key skills showcased:
 
 Fine-tuning and deploying transformer models for domain-adapted NLP tasks.
@@ -34,19 +34,14 @@ Model Inference: DistilGPT-2 (or a fine-tuned variant) generates responses with 
 Financial Logic: Custom functions compute metrics like CAGR and projections.
 Interface: Gradio provides a chat-like UI for user interaction.
 
-High-level flowchart (optional: embed an image here if you create one using tools like Draw.io):
-[Architecture Diagram Placeholder]
-Data Sources and Methodologies
-
 Data Sources:
 
-stock_data.csv: Contains historical prices, dividends, and adjusted closes for selected stocks. Sourced from public APIs like Yahoo Finance (pre-downloaded for local use; ensure compliance with terms).
-Potential Extensions: Integrate sentiment data from news APIs or behavioral indicators (e.g., market volatility) for fine-tuning.
+yfinance for individual stock data.
 
 
 Methodologies:
 
-NLP Fine-Tuning: The code checks for a fine-tuned model directory. Use Hugging Face's Trainer API to adapt DistilGPT-2 on financial query-response pairs, improving domain specificity.
+NLP Fine-Tuning: The code checks for a fine-tuned model directory. Use Hugging Face's Trainer API to adapt SmolLM-135M-Instruct on financial query-response pairs, improving domain specificity.
 Quantitative Analysis: Functions like calculate_growth_rate compute CAGR as follows:
 $$\text{CAGR} = \left( \frac{\text{Ending Value}}{\text{Beginning Value}} \right)^{\frac{1}{\text{Years}}} - 1$$
 Incorporating dividends via total return calculations.
